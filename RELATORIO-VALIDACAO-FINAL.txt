@@ -1,0 +1,37 @@
+FÊNIX ACADEMIA — RELATÓRIO DE VALIDAÇÃO E PREPARAÇÃO
+Data: 22/11/2026
+Projeto Supabase: fenix-academia (lgecozhuhqtwklsrdazw)
+
+VALIDAÇÕES LOCAIS APROVADAS
+- app.js: node --check aprovado.
+- sw.js: node --check aprovado.
+- index.html: parser aprovado.
+- manifest.webmanifest: JSON válido.
+- Pacote ZIP: integridade verificada.
+- Frontend aponta para o projeto Supabase da Fênix e utiliza chave publishable pública, não service_role.
+
+BACKEND VERIFICADO
+- Projeto Supabase ativo.
+- 3 Edge Functions ativas e com verify_jwt=true:
+  admin-create-student (v4), admin-reset-student-access (v1), student-set-password (v1).
+- RLS habilitado nas tabelas públicas verificadas.
+- Políticas de acesso presentes para perfis, treinos, avaliações, mensalidades, pagamentos, mensagens, orientações e notificações.
+- student_onboarding_tokens tem RLS habilitado e nenhuma política de cliente; acesso reservado às funções administrativas.
+- Contagem atual: 1 perfil (professora), 0 treinos, 0 avaliações, 0 matrículas, 0 pagamentos, 0 mensagens e 0 tokens de primeiro acesso. Nenhum aluno de teste foi criado.
+
+PENDÊNCIAS ANTES DE LIBERAR PARA USO REAL
+1. Teste ponta a ponta com sessão autenticada de professora e aluno: cadastro, link individual, expiração, senha, login, nome de preferência, treinos, upload de mídia, avaliações, pagamentos e mensagens.
+2. Teste em celular real e instalação PWA servida por HTTPS.
+3. Configurar hospedagem HTTPS e URL final. Este pacote não foi publicado.
+4. Revisar Storage durante teste real de upload e leitura.
+5. Proteção contra senhas vazadas está desativada no Auth. O aviso permanece; não alterado nesta etapa.
+6. Testar recuperação/reset de acesso em fluxo real.
+
+SEGURANÇA E DADOS
+- Nenhum dado existente foi apagado ou alterado nesta validação.
+- Nenhum usuário de teste foi criado.
+- Nunca incluir chave service_role no frontend, ZIP ou repositório público.
+- Não considerar o aplicativo pronto para produção até concluir os testes acima.
+
+RESULTADO
+Validação estática aprovada e backend inspecionado. Testes autenticados, visuais em dispositivo e publicação permanecem pendentes. Esta versão está preparada para a próxima fase, mas não está publicada nem integralmente testada.

@@ -1,0 +1,17 @@
+FÊNIX ACADEMIA — GERENCIAMENTO DE TREINOS
+
+Melhorias desta versão:
+- A professora pode consultar os treinos já montados por aluno.
+- Cada exercício exibe séries, repetições, carga e descanso.
+- A professora pode editar séries, repetições, carga e descanso.
+- A professora pode remover um exercício da programação.
+- A lista atualiza após inclusão, edição ou remoção.
+- A seleção do aluno é sincronizada entre os formulários de montagem e gerenciamento.
+
+Validações executadas:
+- JavaScript: node --check aprovado.
+- HTML: parser aprovado.
+- A implementação usa as tabelas e políticas RLS já existentes; não foi necessária alteração no banco.
+
+Limitação:
+- Não foi realizado teste de ponta a ponta com sessão autenticada de professora/aluno.
