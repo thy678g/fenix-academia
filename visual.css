@@ -1,0 +1,119 @@
+
+/* FENIX ACADEMIA - IDENTIDADE PREMIUM */
+:root {
+  --bg: #0b0b0d;
+  --panel: #19191c;
+  --panel2: #242428;
+  --cream: #ffffff;
+  --muted: #b8b5b2;
+  --orange: #ff6a00;
+  --gold: #ff8a24;
+  --line: #39302b;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, #3a1b0b, transparent 48%),
+    var(--bg);
+  color: var(--cream);
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.top {
+  padding: 18px 0 26px;
+}
+
+.card, .tile, .stat-card {
+  background: linear-gradient(145deg, #242428, #151518);
+  border: 1px solid #49372d;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px #0005;
+}
+
+.hero {
+  background: linear-gradient(130deg, #302017, #171719);
+  border: 1px solid #a34d1c;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 40px #0007;
+}
+
+.brand {
+  color: var(--orange);
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  letter-spacing: -.03em;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff8a24, #f45b00);
+  color: #17110c;
+  border: none;
+  border-radius: 13px;
+  font-weight: 800;
+  box-shadow: 0 7px 20px #ff6a0030;
+}
+
+.btn.secondary {
+  background: #29292d;
+  color: white;
+  border: 1px solid #51443d;
+  box-shadow: none;
+}
+
+input, select, textarea {
+  background: #101012;
+  color: white;
+  border: 1px solid #48403a;
+  border-radius: 12px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--orange);
+  outline: 2px solid #ff6a0030;
+}
+
+.stat-card strong {
+  color: var(--orange);
+  font-size: 28px;
+}
+
+.tile {
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.tile:active {
+  transform: scale(.98);
+}
+
+.nav {
+  background: #101012f5;
+  border-top: 1px solid #633719;
+  backdrop-filter: blur(16px);
+}
+
+.nav button.active {
+  color: var(--orange);
+}
+
+@media(max-width:700px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .tile {
+    border-radius: 19px;
+  }
+}
